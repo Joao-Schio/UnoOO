@@ -17,7 +17,7 @@ public abstract class Carta {
 	private int numero;
 	private String acao;
 
-	public abstract Cor getCor();
+	public abstract Cor getCor() throws CartaSemCor;
 
 	public abstract String getAcao();
 

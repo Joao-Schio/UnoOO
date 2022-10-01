@@ -2,13 +2,26 @@ package cartas;
 
 public class CartaEspecialSemCor extends CartaComAcao {
 
-	public CartaEspecialSemCor(String ac){//Carta especial sem cor
-		//super.setCor(null);
-		super.setNumero(-1);
-		super.setAcao(ac);
+	private String acao;
+
+
+	
+	public CartaEspecialSemCor(){
+
+	}
+	public CartaEspecialSemCor (String ac){
+		this.acao = ac;
+	}
+	public String getAcao(){
+		return this.acao;
+	}
+	public void setAcao(string ac){
+		this.acao = ac;
+	}
+
+	@Override
+	public final Cor getCor() throws CartaSemCor{
+		return "Essa carta nao possui cor";
 	}
 	
-	public String getCor() {
-		return "Esta carta não possui uma cor";
-	}
 }
